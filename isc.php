@@ -1,5 +1,19 @@
 <?php
 /*
+  Plugin Name: Image Source Control (indiBit-fork)
+  Version: 1.8.11.2f
+  Plugin URI: https://github.com/indiBit/image-source-control
+  Description: The Image Source Control saves the source of an image, lists them and warns if it is missing.
+  Author: sebastian / indibit.de
+  Author URI: http://indibit.de/
+  License: GPL v3
+  
+  This is a fork of Thomas Maier's great Wordpress plugin "Image Source Control"
+  Some changes are made at output of a complete list of media library contents to fit my needs.
+  Find the details of the original plugin below.
+  
+  ----------------------------------------------------------------------------------------------------------
+  
   Plugin Name: Image Source Control
   Version: 1.8.11.2
   Plugin URI: http://webgilde.com/en/image-source-control/
@@ -38,12 +52,11 @@ if ( ! function_exists( 'add_action' ) ) {
     exit();
 }
 
-define( 'ISCVERSION', '1.8.11.2' );
+define( 'ISCVERSION', '1.8.11.2f' );
 define( 'ISCNAME', 'Image Source Control' );
 define( 'ISCTEXTDOMAIN', 'isc' );
 define( 'ISCDIR', basename( dirname( __FILE__ ) ) );
 define( 'ISCPATH', plugin_dir_path( __FILE__ ) );
-define( 'WEBGILDE', 'http://webgilde.com/en/image-source-control' );
 
 load_plugin_textdomain( ISCTEXTDOMAIN, false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 

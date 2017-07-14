@@ -381,9 +381,7 @@ if (!class_exists('ISC_Public')) {
                     <?php if ($options['thumbnail_in_list']) : ?>
                         <th><?php _e('Thumbnail', ISCTEXTDOMAIN); ?></th>
                     <?php endif; ?>
-                    <th><?php _e("Attachment's ID", ISCTEXTDOMAIN); ?></th>
                     <th><?php _e('Title', ISCTEXTDOMAIN); ?></th>
-                    <th><?php _e('Attached to', ISCTEXTDOMAIN); ?></th>
                     <th><?php _e('Source', ISCTEXTDOMAIN); ?></th>
                 </thead>
                 <tbody>
@@ -395,7 +393,7 @@ if (!class_exists('ISC_Public')) {
                         <?php
                             $v_align = '';
                             if ($options['thumbnail_in_list']) :
-                            $v_align = 'style="vertical-align: top;"';
+                            $v_align = 'style="vertical-align: middle;"';
                         ?>
                             <?php if ('custom' != $options['thumbnail_size']) : ?>
                                 <td><?php echo wp_get_attachment_image($id, $options['thumbnail_size']); ?></td>
@@ -403,10 +401,8 @@ if (!class_exists('ISC_Public')) {
                                 <td><?php echo wp_get_attachment_image($id, array($options['thumbnail_width'], $options['thumbnail_height'])); ?></td>
                             <?php endif; ?>
                         <?php endif; ?>
-                        <td <?php echo $v_align;?>><?php echo $id; ?></td>
-                        <td <?php echo $v_align;?>><?php echo $data['title']; ?></td>
-                        <td <?php echo $v_align;?>><?php echo $data['posts']; ?></td>
-                        <td <?php echo $v_align;?>><?php echo $source; ?></td>
+                        <td style="vertical-align: middle; font-weight: bold;"><?php echo $data['title']; ?></td>
+                        <td style="vertical-align: middle; white-space: nowrap;"><?php echo $source; ?></td>
                     </tr>
                 <?php endforeach; ?>
                 </tbody>
